@@ -20,9 +20,9 @@ public class SpringtutorialJdbcApplication {
 		person.setName("John");
 
 
-		PersonService personService =  context.getBean(PersonService.class);
+    	PersonService personService =  context.getBean(PersonService.class);
 		personService.addPerson(person);
-		List<Person> allPerson=personService.showAllPersons();
+//		List<Person> allPerson=personService.showAllPersons();
 
 	}
 
