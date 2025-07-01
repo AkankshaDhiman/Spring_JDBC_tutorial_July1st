@@ -5,6 +5,8 @@ import com.example.springtutorial_jdbc.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonService {
     private PersonRepository repository= new PersonRepository();
@@ -20,5 +22,9 @@ public class PersonService {
     @Autowired
     public void setRepository(PersonRepository repository) {
         this.repository = repository;
+    }
+
+    public List<Person> showAllPersons() {
+        return repository.findAll();
     }
 }

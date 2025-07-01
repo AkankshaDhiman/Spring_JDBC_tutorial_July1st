@@ -6,6 +6,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @SpringBootApplication
 public class SpringtutorialJdbcApplication {
 
@@ -19,6 +22,8 @@ public class SpringtutorialJdbcApplication {
 
 		PersonService personService =  context.getBean(PersonService.class);
 		personService.addPerson(person);
+		List<Person> allPerson=personService.showAllPersons();
+
 	}
 
 }
