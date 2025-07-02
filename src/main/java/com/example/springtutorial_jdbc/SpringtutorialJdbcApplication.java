@@ -16,13 +16,16 @@ public class SpringtutorialJdbcApplication {
 
 		ApplicationContext context = SpringApplication.run(SpringtutorialJdbcApplication.class, args);
 		Person person = context.getBean(Person.class);
-		person.setAge(21);
+		person.setAge(25);
 		person.setName("John");
 
 
     	PersonService personService =  context.getBean(PersonService.class);
-		personService.addPerson(person);
-//		List<Person> allPerson=personService.showAllPersons();
+		//personService.addPerson(person);
+		List<Person> allPerson=personService.showAllPersons();
+		for(Person p:allPerson){
+			System.out.println(p.getName());
+		}
 
 	}
 

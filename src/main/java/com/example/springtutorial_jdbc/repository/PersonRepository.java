@@ -33,22 +33,22 @@ public class PersonRepository {
 
     }
 
-//    public List<Person> findAll() {
-////        List<Person> persons=new ArrayList<Person>();
-////
-////        return persons;
-//        String sql = "select * from person";
-//        RowMapper<Person> rowMapper = new RowMapper<Person>() {
-//            @Override
-//            public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
-//                Person person = new Person();
-//                person.setName(rs.getString("name"));
-//                person.setAge(rs.getInt("age"));
-//                return person;
-//            }
-//        };
-//        List<Person> personList = jdbcTemplate.query(sql, rowMapper);
-//        return personList;
-//    }
+    public List<Person> findAll() {
+    //    List<Person> persons=new ArrayList<Person>();
+ //
+ //        return persons;
+        String sql = "select * from person";
+        RowMapper<Person> rowMapper = new RowMapper<Person>() {
+            @Override
+            public Person mapRow(ResultSet rs, int rowNum) throws SQLException {
+                Person person = new Person();
+                person.setName(rs.getString("name"));
+                person.setAge(rs.getInt("age"));
+                return person;
+            }
+        };
+        List<Person> personList = jdbcTemplate.query(sql, rowMapper);
+        return personList;
+    }
 }
 

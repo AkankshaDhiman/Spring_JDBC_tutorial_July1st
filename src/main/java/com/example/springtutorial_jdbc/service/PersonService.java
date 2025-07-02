@@ -24,7 +24,7 @@ public class PersonService {
         this.repository = repository;
     }
 
-//    public List<Person> showAllPersons() {
-//        return repository.findAll();
-//    }
+    public List<Person> showAllPersons() {
+        return repository.findAll();
+    }
 }
